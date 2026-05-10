@@ -25,12 +25,8 @@ Google Colab(Runtime environment)
 1. Churn by Tenure
 Customers were segmented into three cohorts — 0–12 months, 1–2 years, and 2+ years — to examine how churn rate evolves over time.
 Key finding: Newer customers (0–12m) churn at significantly higher rates, while long-tenured customers show strong brand loyalty. This points to the first year as the critical retention window.
-2. Predictive Modeling (Random Forest)
-Features used: Total Charges, Senior Citizen, Streaming Movies
-Model Accuracy: 67.71%
-Top Feature:Total Charges (96.0% importance)
-Secondary FeatureSenior Citizen (2.6%)
-Tertiary FeatureStreaming Movies (1.5%)
+2. Predictive Model — Logistic Regression
+A Logistic Regression classifier was trained on 11 features including contract type, tenure, monthly and total charges, internet service, tech support, online security, streaming movies, payment method, paperless billing, and senior citizen status. Categorical variables were encoded using one-hot encoding and all features were standardized before training. Class imbalance (5,174 No vs 1,869 Yes) was handled using balanced class weights. Model coefficients were used to interpret which features most strongly predict churn, with results visualized as a horizontal bar chart.
 
  Business Recommendations:
 1. Pricing is the #1 churn driver — Total Charges dominates feature importance. The brand should audit pricing tiers and consider optimized plans for price-sensitive segments.
